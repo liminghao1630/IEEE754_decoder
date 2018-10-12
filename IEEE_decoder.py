@@ -25,5 +25,13 @@ def IEEE754_to_float(hex_str):
     return result_float
 
 
+def BBox_decoder(BBox_list):
+    result_list = []
+    for hex in BBox_list:
+        result_list.append(IEEE754_to_float(hex))
+    return result_list
+
 if __name__ == '__main__':
-    print(IEEE754_to_float('40239008637bd05a'))
+    # 4049d51666666667 4082b47f33333333 404d6f8ccccccccd 40828ee266666666
+    # 51 598 58 593
+    print(IEEE754_to_float('404d6f8ccccccccd'))
